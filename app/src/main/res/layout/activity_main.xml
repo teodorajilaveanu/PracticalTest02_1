@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ServerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SERVER"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/server_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ServerTextView"
+        android:hint="Server Port"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/start_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Launch server"
+        android:layout_below="@id/server_port"/>
+
+    <TextView
+        android:id="@+id/ClientTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CLIENT"
+        android:gravity="center"
+        android:layout_below="@id/start_server"/>
+    <EditText
+        android:id="@+id/client_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ClientTextView"
+        android:hint="Client Address"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/client_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/client_addr"
+        android:hint="Client Port"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/client_port"
+        android:hint="Key"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/key"
+        android:hint="Value"
+        android:gravity="center" />
+
+
+    <Button
+        android:id="@+id/put"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:text="PUT"
+        android:layout_below="@id/value"/>
+
+    <Button
+        android:id="@+id/get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET"
+        android:layout_below="@id/value"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/get"
+        android:gravity="center" />
+</RelativeLayout>
